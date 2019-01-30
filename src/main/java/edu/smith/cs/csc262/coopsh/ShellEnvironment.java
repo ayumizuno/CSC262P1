@@ -86,7 +86,9 @@ public class ShellEnvironment {
 	public File makeFile(String path) {
 		if (path.startsWith("/")) {
 			return new File(path);
-		} else {
+		} else if (path.equals("~")) {
+			return new File(System.getProperty("user.home"));
+		} else{
 			return new File(this.currentDirectory, path);
 		}
 	}
