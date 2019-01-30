@@ -41,7 +41,7 @@ public class WordCount extends Task {
 			byte[] lineBytes = oneLine.getBytes("UTF-8");
 			numBytes += lineBytes.length;
 		} catch(UnsupportedEncodingException e){
-
+			System.err.println(e.getMessage());
 		}
 
 

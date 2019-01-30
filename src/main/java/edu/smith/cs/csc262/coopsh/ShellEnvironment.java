@@ -10,6 +10,7 @@ import java.util.Map;
 import edu.smith.cs.csc262.coopsh.apps.Cat;
 import edu.smith.cs.csc262.coopsh.apps.Pwd;
 import edu.smith.cs.csc262.coopsh.apps.WordCount;
+import edu.smith.cs.csc262.coopsh.apps.Echo;
 import edu.smith.cs.csc262.coopsh.text.ShellParser;
 import edu.smith.cs.csc262.coopsh.text.Token;
 
@@ -64,12 +65,15 @@ public class ShellEnvironment {
 			return new Pwd(this, args);
 		case "wc":
 			return new WordCount(this, args);
+		case "echo":
+			return new Echo(this, args);
 		// cd is special.
 		case "cd":
 			if (args.length != 1)
 				throw new IllegalArgumentException("More than one argument to cd!");
 			executeChangeDir(args[0]);
 			return null;
+
 		// Agh!
 		default:
 			throw new RuntimeException("No such program: " + name);
