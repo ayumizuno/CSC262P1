@@ -25,9 +25,7 @@ public class WordCount extends Task {
 		
 		// only output and print when we've seen the whole file!
 		if (line.isEndOfFile()) {
-			this.println(wordCount);
-			this.println(numLines);
-			this.println(numBytes);
+			this.println(wordCount + " " + numLines + " " + numBytes);
 			this.closeOutput();
 			this.exit(0);
 			return;

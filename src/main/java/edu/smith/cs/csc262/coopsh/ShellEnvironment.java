@@ -11,6 +11,13 @@ import edu.smith.cs.csc262.coopsh.apps.Cat;
 import edu.smith.cs.csc262.coopsh.apps.Pwd;
 import edu.smith.cs.csc262.coopsh.apps.WordCount;
 import edu.smith.cs.csc262.coopsh.apps.Echo;
+import edu.smith.cs.csc262.coopsh.apps.ListFiles;
+import edu.smith.cs.csc262.coopsh.apps.SimpleGrep;
+import edu.smith.cs.csc262.coopsh.apps.RegexGrep;
+import edu.smith.cs.csc262.coopsh.apps.Sort;
+import edu.smith.cs.csc262.coopsh.apps.Head;
+import edu.smith.cs.csc262.coopsh.apps.Tail;
+
 import edu.smith.cs.csc262.coopsh.text.ShellParser;
 import edu.smith.cs.csc262.coopsh.text.Token;
 
@@ -67,6 +74,25 @@ public class ShellEnvironment {
 			return new WordCount(this, args);
 		case "echo":
 			return new Echo(this, args);
+		case "ls":
+			return new ListFiles(this, args);
+		case "grep":
+			return new SimpleGrep(this, args);
+		case "regexGrep":
+			return new RegexGrep(this, args);
+		case "sort":
+			return new Sort(this, args);
+		case "head":
+			return new Head(this, args);
+		case "tail":
+			return new Tail(this, args);
+		case "setvar":
+			if (args.length != 2)
+				throw new IllegalArgumentException("setvar takes two arguments.");
+			if (!args[0].matches("[a-zA-Z]+"))
+				throw new IllegalArgumentException("Variable name is invalid");
+			setVariable(args[0], args[1]);
+			return null;
 		// cd is special.
 		case "cd":
 			if (args.length != 1)
