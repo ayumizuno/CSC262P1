@@ -6,15 +6,37 @@ import edu.smith.cs.csc262.coopsh.Task;
 
 import java.io.UnsupportedEncodingException;
 
+/**
+ * This Task mimics the UNIX wc utility and prints out
+ * number of words, number of lines, and number of bytes.
+ *
+ * @author jfoley
+ * edited by amizuno
+ *
+ */
 public class WordCount extends Task {
+	/**
+	 * These store the number of words,
+	 * number of lines,
+	 * and number of bytes.
+	 */
 	int wordCount = 0;
 	int numLines = 0;
 	int numBytes = 0;
 
+	/**
+	 * This Task counts words, lines, and bytes.
+	 *
+	 * @param args - command line arguments
+	 */
 	public WordCount(ShellEnvironment env, String[] args) {
 		super(env, args);
 	}
 
+	/**
+	 * Takes each line and increments number of words, lines, and bytes
+	 * until all lines have been polled. 
+	 */
 	@Override
 	protected void update() {
 		InputLine line = this.input.poll();
@@ -41,8 +63,5 @@ public class WordCount extends Task {
 		} catch(UnsupportedEncodingException e){
 			System.err.println(e.getMessage());
 		}
-
-
 	}
-	
 }

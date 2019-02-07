@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" line="41" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" line="63" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1694d646-820a-4f4d-9b29-823054b118aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Echo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Head.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/ListFiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/RegexGrep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/SimpleGrep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Sort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Tail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/ShellEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/ShellEnvironment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +16,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Cat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="46" column="7" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
+            <state relative-caret-position="-51">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Tail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+            <state relative-caret-position="646">
+              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/SetVar.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/head.java" />
@@ -174,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/RegexGrep.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Sort.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Tail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java" />
       </list>
     </option>
   </component>
@@ -239,7 +237,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549571006837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549571719674" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
@@ -404,16 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="29" selection-start-line="19" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fruits.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -478,16 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Cat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="46" column="7" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="46" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -510,10 +488,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Tail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="646">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/Cat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/smith/cs/csc262/coopsh/apps/WordCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
           </folding>
         </state>
       </provider>
