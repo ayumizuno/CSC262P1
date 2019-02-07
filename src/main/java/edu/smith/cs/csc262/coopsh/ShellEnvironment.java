@@ -78,7 +78,7 @@ public class ShellEnvironment {
 			return new ListFiles(this, args);
 		case "grep":
 			return new SimpleGrep(this, args);
-		case "regexGrep":
+		case "rgrep":
 			return new RegexGrep(this, args);
 		case "sort":
 			return new Sort(this, args);
@@ -86,7 +86,7 @@ public class ShellEnvironment {
 			return new Head(this, args);
 		case "tail":
 			return new Tail(this, args);
-		case "setvar":
+		case "set":
 			if (args.length != 2)
 				throw new IllegalArgumentException("setvar takes two arguments.");
 			if (!args[0].matches("[a-zA-Z]+"))

@@ -1,42 +1,55 @@
 package edu.smith.cs.csc262.coopsh.apps;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
+import edu.smith.cs.csc262.coopsh.InputLine;
 import edu.smith.cs.csc262.coopsh.ShellEnvironment;
 import edu.smith.cs.csc262.coopsh.Task;
 
+/**
+ * This Task mimics the UNIX grep utility without regex.
+ *
+ * @author amizuno
+ *
+ */
 public class SimpleGrep extends Task {
 
-    File file;
-    String key;
+    /**
+     * This stores the pattern to be searched
+     */
+    String pattern;
 
+    /**
+     * This Task sets the pattern to be searched.
+     *
+     * @param args - command line arguments
+     */
     public SimpleGrep(ShellEnvironment env, String[] args) {
         super(env, args);
-        File workingDir = env.currentDirectory;
-        String pathname = workingDir.getAbsolutePath()+ "/" +args[1];
-        System.out.println(pathname);
-        this.file = new File(pathname);
-        this.key = args[0];
+        this.pattern = args[0];
     }
 
+    /**
+     * Go through each line and print the entire line
+     * if the pattern matches in that line.
+     */
     @Override
     protected void update() {
-        Scanner sc = null;
-        try {
-            sc = new Scanner(file);
-            while (sc.hasNext()) {
-                String line = sc.nextLine();
-                if (line.contains(key)) {
-                    System.out.println(line);
-                }
-            }
-        } catch (FileNotFoundException e){
-            System.out.println("invalid file name");
+        InputLine line = this.input.poll();
+        if (line == null) {
+            return;
         }
-        this.closeOutput();
-        this.exit(0);
-    }
 
+        if (line.isEndOfFile()) {
+            this.closeOutput();
+            this.exit(0);
+            return;
+        }
+
+        //print line if pattern found
+        String oneLine = line.get();
+        if (oneLine.contains(pattern)) {
+            this.println(oneLine);
+        }
+
+
+    }
 }

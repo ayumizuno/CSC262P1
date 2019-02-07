@@ -1,45 +1,56 @@
 package edu.smith.cs.csc262.coopsh.apps;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 import java.util.regex.*;
-
+import edu.smith.cs.csc262.coopsh.InputLine;
 import edu.smith.cs.csc262.coopsh.ShellEnvironment;
 import edu.smith.cs.csc262.coopsh.Task;
 
+/**
+ * This Task mimics the UNIX grep utility with regex.
+ *
+ * @author amizuno
+ *
+ */
 public class RegexGrep extends Task {
-
-    File file;
+    /**
+     * This stores the regex pattern to be searched.
+     */
     Pattern pattern;
 
+    /**
+     * This Task sets the regex pattern to be searched.
+     *
+     * @param args - command line arguments
+     */
     public RegexGrep(ShellEnvironment env, String[] args) {
         super(env, args);
-        File workingDir = env.currentDirectory;
-        String pathname = workingDir.getAbsolutePath()+ "/" +args[1];
-        System.out.println(pathname);
-        this.file = new File(pathname);
         this.pattern = Pattern.compile(args[0]);
     }
 
+    /**
+     * Go through each line and print the entire line
+     * if the pattern matches in that line.
+     */
     @Override
     protected void update() {
-        Scanner sc = null;
+        InputLine line = this.input.poll();
         Matcher matcher = null;
-        try {
-            sc = new Scanner(file);
-            while (sc.hasNext()) {
-                String line = sc.nextLine();
-                matcher = pattern.matcher(line);
-                if (matcher.find()) {
-                    System.out.println(line);
-                }
-            }
-        } catch (FileNotFoundException e){
-            System.out.println("invalid file name");
-        }
-        this.closeOutput();
-        this.exit(0);
-    }
 
+        if (line == null) {
+            return;
+        }
+
+        if (line.isEndOfFile()) {
+            this.closeOutput();
+            this.exit(0);
+            return;
+        }
+
+        //search for match in line
+        String oneLine = line.get();
+        matcher = pattern.matcher(oneLine);
+        if (matcher.find()) {
+            this.println(oneLine);
+        }
+    }
 }

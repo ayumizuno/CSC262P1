@@ -7,36 +7,51 @@ import edu.smith.cs.csc262.coopsh.Task;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * This Task mimics the UNIX Sort utility.
+ *
+ * @author amizuno
+ *
+ */
 public class Sort extends Task {
 
-    private ArrayList<String> lines = new ArrayList<String>();;
+    /**
+     * This stores all of the input lines.
+     */
+    private ArrayList<String> lines;
 
+    /**
+     * This Task initializes the arraylist to store all of
+     * the lines.
+     *
+     * @param args - command line arguments!
+     */
     public Sort(ShellEnvironment env, String[] args) {
         super(env, args);
+        lines = new ArrayList<String>();
     }
 
+    /**
+     * Adds each line to the arraylist and
+     * prints out the arraylist after sorting.
+     */
     @Override
     protected void update() {
         InputLine line = this.input.poll();
         if (line == null) {
-            // still waiting for more...
             return;
         }
 
-        // only output and print when we've seen the whole file!
         if (line.isEndOfFile()) {
-            System.out.println(lines);
             Collections.sort(lines);
             for (String oneLine:lines){
-                System.out.println(oneLine);
+                this.println(oneLine);
             }
             this.closeOutput();
             this.exit(0);
             return;
         }
-
-        // Otherwise, increment this count!
+        //add line to array
         lines.add(line.get());
     }
-
 }
